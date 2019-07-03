@@ -1,3 +1,2 @@
-# hello-world
-First repository to get started with GitHub.
-Trying featurs of a new branch.
+# Robe
+In questa repo butto cose a caso, test inutili e poco altro.

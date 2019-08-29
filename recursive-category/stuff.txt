@@ -1,0 +1,45 @@
+<html>
+<script type="text/javascript">
+var categories = [
+    {id: '002', name: 'pc',         parent: null},
+    {id: '888', name: 'vegetables', parent: '001'},
+    {id: '894', name: 'carrots',    parent: '888'},
+    {id: '111', name: 'hp',         parent: '002'},
+    {id: '666', name: 'microsoft',  parent: '002'},
+    {id: '777', name: 'XPS',        parent: '111'},
+    {id: '099', name: 'fish',       parent: '000'},
+    {id: '333', name: 'tuna',       parent: '099'},
+    {id: '351', name: 'salmon',     parent: '099'},
+    {id: '404', name: 'beef',       parent: '444'},
+    {id: '444', name: 'meat',       parent: '000'},
+    {id: '599', name: 'asparagum',  parent: '888'},
+    {id: '112', name: 'salad',      parent: '888'},
+    {id: '802', name: 'ice',        parent: '112'},
+    {id: '456', name: 'rucola',     parent: '112'},
+    {id: '762', name: 'eggplant',   parent: '888'},
+    {id: '285', name: 'capsicum',   parent: '888'},
+    {id: '922', name: 'pumpkin',    parent: '888'},
+    {id: '001', name: 'food',       parent: null},
+    {id: '055', name: 'potato',     parent: '888'},
+];
+var allCat = getParentedCategories(null);
+
+
+
+function getParentedCategories(parent){
+    var intCategories = [];
+    categories.forEach(item => {
+        if(item.parent == parent){
+            item.children = getParentedCategories(item.id);
+            intCategories.push(item);
+        }
+    });
+    return intCategories;
+}
+
+
+console.log('allCat');
+console.log(allCat);
+
+</script>
+</html>

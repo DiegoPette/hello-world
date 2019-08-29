@@ -1,0 +1,109 @@
+<html>
+<script>
+
+
+var categories = [
+    {id: '002', name: 'pc',         parent: ''},
+    {id: '888', name: 'vegetables', parent: '000'},
+    {id: '894', name: 'carrots',    parent: '888'},
+    {id: '111', name: 'hp',         parent: '002'},
+    {id: '666', name: 'microsoft',  parent: '002'},
+    {id: '777', name: 'XPS',        parent: '111'},
+    {id: '099', name: 'fish',       parent: '000'},
+    {id: '333', name: 'tuna',       parent: '099'},
+    {id: '351', name: 'salmon',     parent: '099'},
+    {id: '404', name: 'beef',       parent: '444'},
+    {id: '444', name: 'meat',       parent: '000'},
+    {id: '599', name: 'asparagum',  parent: '888'},
+    {id: '112', name: 'salad',      parent: '888'},
+    {id: '802', name: 'ice',        parent: '112'},
+    {id: '456', name: 'rucola',     parent: '112'},
+    {id: '762', name: 'eggplant',   parent: '888'},
+    {id: '285', name: 'capsicum',   parent: '888'},
+    {id: '922', name: 'pumpkin',    parent: '888'},
+    {id: '000', name: 'food',       parent: ''},
+    {id: '055', name: 'potato',     parent: '888'},
+
+];
+var allCat = {};
+
+categories.forEach(item => {
+    allCat[item.id] = item;
+    allCat[item.id].children = [];    
+});
+
+console.log('allCat');
+console.log(allCat);
+console.log('----------------');
+console.log('categories');
+console.log(categories);
+console.log('----------------');
+
+var catTree = [];
+
+buildCategories();
+
+console.log(allCat);
+
+function buildCategories (){
+    for( var i = 0; i < categories.length; i++){
+        console.log('ITEM ' + i);
+        console.log(categories[i]);
+        console.log('----------------');
+        populateCat(categories[i]);
+    }
+};
+var tmp;
+function populateCat(cat){ //, arr
+    
+    console.log('Entro nella fn ricorsiva');
+    //if(arr == null || arr == undefined){
+    //    arr = {};
+    //}
+    //console.log('item considerato: ');
+    //console.log(cat);
+    if(cat.parent == ''){
+        //console.log('cat.parent == \'\' ROOT');
+        //arr[cat.id] = allCat[cat.id];
+        //arr[cat.id].children = {};
+        //return arr;
+        
+        //allCat[cat.id].children = [];
+        //return allCat[cat.id];
+        console.log(allCat[cat.id]);
+        return true;
+    } else {
+        
+
+        //catTree = populateCat(allCat[cat.parent] , arr);
+        //catTree[cat.parent].children[cat.id] = cat;
+        //arr[cat.id].children = {};
+        //console.log(catTree);
+
+        //console.log('NON ROOT');
+        //console.log(populateCat(allCat[cat.parent])); // , arr
+        //allCat[cat.id].children = [];
+        //allCat[cat.parent].children.push(allCat[cat.id]);
+
+        //return true;
+        
+        //var a = populateCat(allCat[cat.parent]);
+        //console.log(a);
+        //return allCat[populateCat(allCat[cat.parent])].children.push(allCat[cat.id]);
+    
+        //.push(allCat[cat.id])
+        //populateCat(allCat[cat.parent]) //parent id
+        //return tmp[populateCat(allCat[cat.parent].id)].push(cat.id);
+        populateCat(allCat[cat.parent]);
+        console.log(allCat[cat.id]);
+        return true;
+    }
+    //return tmp;
+    // arr
+    //console.log(cat);
+    //console.log(tmp);
+
+};
+</script>
+</html>
+

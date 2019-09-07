@@ -1,0 +1,46 @@
+html{
+    background-color: rgb(73, 124, 75);
+    .bodypage{
+        background-color: rgb(100, 100, 255);
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        .item{
+            min-height: 30vh;
+            margin: 5vh 0;
+            width: 100%;
+            @for $i from 1 through 20{
+                &:nth-child(#{$i}){
+                    background-color: rgb(22, 22, 22);
+                }
+            }
+            .elem{
+                background-color: rgb(217, 255, 0);
+                min-height: 30vh;
+                height: 400px;
+                width: 100%;
+            }
+        }
+        .terminal{
+            position: fixed;
+            top:0;
+            right:0;
+            background-color:#000;
+            color: #fff;
+            width: 300px;
+            height: 300px;
+            z-index: 10;
+            opacity: .8;
+        }
+        .margin{
+            position:fixed;
+            height: 1px;
+            width: 100%;
+            background-color: red;
+            left:0;
+            z-index: 5;
+        }
+    }
+}

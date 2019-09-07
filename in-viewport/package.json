@@ -1,0 +1,22 @@
+{
+  "name": "in-viewport",
+  "version": "1.0.0",
+  "description": "My premium Nuxt.js project",
+  "author": "Pette",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "nuxt": "^2.0.0",
+    "pug": "^2.0.4",
+    "sass": "^1.23.0-module.beta.1"
+  },
+  "devDependencies": {
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.0"
+  }
+}

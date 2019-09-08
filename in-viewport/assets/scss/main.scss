@@ -23,24 +23,24 @@ html{
                 width: 100%;
             }
         }
-        .terminal{
-            position: fixed;
-            top:0;
-            right:0;
-            background-color:#000;
-            color: #fff;
-            width: 300px;
-            height: 300px;
-            z-index: 10;
-            opacity: .8;
-        }
-        .margin{
-            position:fixed;
-            height: 1px;
-            width: 100%;
-            background-color: red;
-            left:0;
-            z-index: 5;
-        }
+        // .terminal{
+        //     position: fixed;
+        //     top:0;
+        //     right:0;
+        //     background-color:#000;
+        //     color: #fff;
+        //     width: 300px;
+        //     height: 300px;
+        //     z-index: 10;
+        //     opacity: .8;
+        // }
+        // .margin{
+        //     position:fixed;
+        //     height: 1px;
+        //     width: 100%;
+        //     background-color: red;
+        //     left:0;
+        //     z-index: 5;
+        // }
     }
 }

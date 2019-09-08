@@ -29,6 +29,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/in-viewport.js',
   ],
   /*
   ** Nuxt.js dev-modules
